@@ -6,14 +6,6 @@ import ProgressBar from "./components/ProgressBar";
 
 const questions = [
   {
-    question: "¿Cual es la palabra reservada para la herencia en JS? Explica Herencia",
-    progress: 10,
-  },
-  {
-    question: "Explica useEffect",
-    progress: 10,
-  },
-  {
     question: "¿Que es un componente y cántos tipos de componentes existen? Explica diferencias",
     progress: 10,
   },
