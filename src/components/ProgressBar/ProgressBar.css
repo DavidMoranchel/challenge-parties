@@ -1,0 +1,22 @@
+.ProgressBar-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ProgressBar {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.ProgressBar-filler {
+    height: 30px;
+    -webkit-transition: width .5s; /* Safari */
+    transition: width .5s ease-in;
+    border-radius: 20px;
+}
+
