@@ -37,10 +37,6 @@ const questions = [
     question: "¿Menciona los tipos de componentes que nos proporciona Reat Router DOM?",
     progress: 10,
   },
-  {
-    question: "",
-    progress: 10,
-  },
 ];
 
 function App() {
