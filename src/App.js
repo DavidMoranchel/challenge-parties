@@ -33,10 +33,6 @@ const questions = [
     question: "¿Cuál es el orden de ejecución de el lifecycle de los componentes?",
     progress: 10,
   },
-  {
-    question: "¿Menciona los tipos de componentes que nos proporciona Reat Router DOM?",
-    progress: 10,
-  },
 ];
 
 function App() {
