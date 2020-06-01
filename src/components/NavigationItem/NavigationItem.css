@@ -1,0 +1,14 @@
+.NavigationItem {
+    width: 100%;
+}
+
+.Link {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    font-size: calc(1em + 1vw);
+}
+
+.Link:hover {
+    color: #34ffd1;
+}

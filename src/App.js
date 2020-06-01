@@ -1,84 +1,88 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+
+// External dependencies
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Pages
+import Home from './pages/Home'
+import TeamQuestions from "./pages/TeamQuestions";
 
 // Components
-import ProgressBar from "./components/ProgressBar";
+// import ProgressBar from "./components/ProgressBar";
 
-const questions = [
-  {
-    question: "¿Que es un componente y cántos tipos de componentes existen? Explica diferencias",
-    progress: 10,
-  },
-  {
-    question: "¿Quién lanzo al mundo React JS?",
-    progress: 5,
-  },
-  {
-    question: "¿Cómo hacemos funcionar un input en React?",
-    progress: 10,
-  },
-  {
-    question: "¿De que maneras ponemos dar acceso del contexto de la clase a un methodo?",
-    progress: 10,
-  },
-  {
-    question: "¿Qué es React JS?",
-    progress: 5,
-  },
-  {
-    question: "Explica useState",
-    progress: 10,
-  },
-  {
-    question: "¿Cuál es el orden de ejecución de el lifecycle de los componentes?",
-    progress: 10,
-  },
-];
+// CSS
+import "./App.css";
+
 
 function App() {
-  const [team1, setTeam1] = useState(0);
-  const [team2, setTeam2] = useState(0);
-  const [team3, setTeam3] = useState(0);
-  const [team4, setTeam4] = useState(0);
-  const [counter, setCounter] = useState(0);
-  const [currentTeam, setCurrentTeam] = useState(1);
-  const [maxQuestions, setMaxQuestions] = useState(0);
-
-  const handleClickSuccess = () => {
-    if (currentTeam === 1) {
-      setTeam1((team1) => team1 + questions[counter]["progress"]);
-    } else if (currentTeam === 2) {
-      setTeam2((team2) => team2 + questions[counter]["progress"]);
-    } else if (currentTeam === 3) {
-      setTeam3((team3) => team3 + questions[counter]["progress"]);
-    } else if (currentTeam === 4) {
-      setTeam4((team4) => team4 + questions[counter]["progress"]);
-    }
-
-    if (currentTeam === 4) {
-      setCurrentTeam(1)
-    } else {
-      setCurrentTeam(currentTeam => currentTeam + 1)
-    }
-
-    if (counter === questions.length - 1) {
-      setMaxQuestions(1);
-    } else {
-      setCounter((counter) => counter + 1);
-    }
-  };
-
-  const handleClickError = () => {
-    if (currentTeam === 4) {
-      setCurrentTeam(1);
-    } else {
-      setCurrentTeam((currentTeam) => currentTeam + 1);
-    }
-  };
-
   return (
-    <div className="App">
-      <div className="Container">
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route exact path="/team-questions">
+            <TeamQuestions />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+
+// const questions = [
+//   {
+//     question:
+//       "¿Que es un componente y cántos tipos de componentes existen? Explica diferencias",
+//     progress: 10,
+//   },
+// ];
+
+// const [team1, setTeam1] = useState(0);
+// const [team2, setTeam2] = useState(0);
+// const [team3, setTeam3] = useState(0);
+// const [team4, setTeam4] = useState(0);
+// const [counter, setCounter] = useState(0);
+// const [currentTeam, setCurrentTeam] = useState(1);
+// const [maxQuestions, setMaxQuestions] = useState(0);
+
+// const handleClickSuccess = () => {
+//   if (currentTeam === 1) {
+//     setTeam1((team1) => team1 + questions[counter]["progress"]);
+//   } else if (currentTeam === 2) {
+//     setTeam2((team2) => team2 + questions[counter]["progress"]);
+//   } else if (currentTeam === 3) {
+//     setTeam3((team3) => team3 + questions[counter]["progress"]);
+//   } else if (currentTeam === 4) {
+//     setTeam4((team4) => team4 + questions[counter]["progress"]);
+//   }
+
+//   if (currentTeam === 4) {
+//     setCurrentTeam(1)
+//   } else {
+//     setCurrentTeam(currentTeam => currentTeam + 1)
+//   }
+
+//   if (counter === questions.length - 1) {
+//     setMaxQuestions(1);
+//   } else {
+//     setCounter((counter) => counter + 1);
+//   }
+// };
+
+// const handleClickError = () => {
+//   if (currentTeam === 4) {
+//     setCurrentTeam(1);
+//   } else {
+//     setCurrentTeam((currentTeam) => currentTeam + 1);
+//   }
+// };
+
+/* <div className="Container">
         {maxQuestions === 1 ? (
           <h3>Ganador!</h3>
         ) : (
@@ -125,9 +129,4 @@ function App() {
           teamTitle={"Equipo 4"}
           backgroundColor={"#1fc024"}
         />
-      </div>
-    </div>
-  );
-}
-
-export default App;
+      </div> */

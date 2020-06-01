@@ -1,30 +1,29 @@
 .App {
-  text-align: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  background-color: #282c34;
 }
 
-h3 {
-  margin: 5px 0;
-}
 
 .Container {
-  flex: 50%;
-  background-color: #282c34;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% auto;
   min-height: 100vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
+.Content {
+  padding: 10px;
+}
 
+/* 
 .Buttons-container button {
   width: 200px;
   background-color: transparent;
@@ -47,4 +46,4 @@ h3 {
 
 .Buttons-container button:focus {
   outline: none;
-}
+} */

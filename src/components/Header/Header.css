@@ -1,0 +1,19 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Header h1 {
+    color: #34b3ff;
+    font-size: calc(1.5em + 2vw);
+}
+
+.Header p {
+    font-size: calc(.7em + 1vw);
+}
+
+.Header h1, .Header p {
+    margin: 5px 0;
+}
